@@ -1,0 +1,30 @@
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: 'center';
+    padding: 12px 16px;
+    border-bottom:1px solid #933a3a;
+}
+
+.brand{ font-weight: 700;}
+
+/* estilos para los enlaces del menu */
+.menu a{
+    margin-right: 10px;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+/* estilo especial cueando el enlace esta activo routerLink*/
+.menu a.active{
+    font-weight: 700;
+    border: 1px solid #333
+}
+
+.content{
+    padding: 16px;
+}
+.footer{
+    padding: 12px 16px;
+    border-top:1px #ddd;
+}

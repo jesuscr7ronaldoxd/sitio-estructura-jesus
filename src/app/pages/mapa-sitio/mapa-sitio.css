@@ -1,0 +1,203 @@
+/* ======================
+   RESET & BASE
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #111 0%, #050505 65%);
+  color: #eaeaea;
+}
+
+/* ======================
+   CONTENEDOR PRINCIPAL
+====================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* ======================
+   ENCABEZADOS
+====================== */
+h2, h5 {
+  color: #ff0055;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+/* ======================
+   CARDS
+====================== */
+.card {
+  background: linear-gradient(160deg, #121212, #1f1f1f);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,.6);
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: all .35s ease;
+  color: #eaeaea;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 20px 45px rgba(255,0,85,.35);
+}
+
+/* 🔥 FIX TEXTO NEGRO DE BOOTSTRAP */
+.card,
+.card-body,
+.card p,
+.card h5,
+.card strong,
+.card span,
+.card small {
+  color: #eaeaea;
+}
+
+/* ======================
+   CARD SELECCIONADA
+====================== */
+.selected-card {
+  background: linear-gradient(160deg, #1a1a1a, #0f0f0f);
+  border: 1px solid #ff0055;
+  box-shadow: 0 0 35px rgba(255,0,85,.4);
+}
+
+.selected-card strong {
+  color: #ff0055;
+}
+
+/* ======================
+   LABELS Y INPUTS
+====================== */
+.form-label {
+  font-weight: 600;
+  color: #eaeaea;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-control,
+.form-select {
+  background: #1b1b1b;
+  border: 1px solid #333;
+  color: #eaeaea;
+  padding: 10px 14px;
+  border-radius: 12px;
+  transition: all .3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #ff0055;
+  box-shadow: 0 0 10px rgba(255,0,85,.5);
+}
+
+/* ======================
+   BOTONES
+====================== */
+.btn {
+  padding: 10px 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #ff0055;
+  color: #000;
+  border: none;
+  box-shadow: 0 8px 25px rgba(255,0,85,.4);
+}
+
+.btn-outline-secondary {
+  background: transparent;
+  color: #ff0055;
+  border: 2px solid #ff0055;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255,0,85,.5);
+}
+
+/* ======================
+   TEXTO DE AYUDA
+====================== */
+.text-muted {
+  color: #bdbdbd !important;
+  font-size: 13px;
+}
+
+/* ======================
+   LISTA DE RESULTADOS
+====================== */
+.list-group-item {
+  background: #1b1b1b;
+  color: #eaeaea;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  transition: all .3s ease;
+}
+
+.list-group-item:hover {
+  background: #2a2a2a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255,0,85,.3);
+}
+
+/* ======================
+   BADGES
+====================== */
+.badge {
+  background-color: #333;
+  color: #ff0055;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+/* ======================
+   ALERTAS
+====================== */
+.alert-warning {
+  background: #2a1a1a;
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
+  border-radius: 12px;
+  padding: 12px 15px;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 900px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

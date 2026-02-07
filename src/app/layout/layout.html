@@ -1,0 +1,40 @@
+<header class="topbar">
+  <div class="brand">Sitio Estructura</div>
+
+  <nav class="menu">
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Inicio
+    </a>
+
+    <a routerLink="/breadcrumbs" routerLinkActive="active">
+      breadcrumbs
+    </a>
+
+    <a routerLink="/elementos" routerLinkActive="active">
+      Elementos
+    </a>
+
+    <a routerLink="/menu" routerLinkActive="active">
+      Menú
+    </a>
+
+    <a routerLink="/mapa" routerLinkActive="active">
+      Mapa del sitio
+    </a>
+  </nav>
+</header>
+
+<main class="content">
+  <!-- ✅ selector correcto -->
+  <app-breadcrumb></app-breadcrumb>
+
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer">
+  <small></small>
+</footer>

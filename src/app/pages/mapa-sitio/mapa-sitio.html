@@ -1,0 +1,79 @@
+<div class="container mt-3" @fadeSlide>
+
+  <h2 class="mb-4">🔍 Búsqueda en el sitio</h2>
+
+  <!-- SELECCIÓN -->
+  <div class="card mb-4">
+    <div class="card-body">
+
+      <label class="form-label">Selecciona una página</label>
+
+      <div class="input-group">
+        <select class="form-select" [(ngModel)]="selectedPage">
+          <option [ngValue]="null">-- Elige una página --</option>
+          <option *ngFor="let item of items" [ngValue]="item">
+            {{ item.title }} · {{ item.section }}
+          </option>
+        </select>
+
+        <button
+          class="btn btn-primary"
+          [disabled]="!selectedPage"
+          (click)="goToPage(selectedPage)">
+          Ir a la página
+        </button>
+
+        <button class="btn btn-outline-secondary" (click)="clear()">
+          Limpiar
+        </button>
+      </div>
+
+      <small class="text-muted">
+        Selecciona una página y presiona <b>Ir a la página</b>.
+      </small>
+    </div>
+  </div>
+
+  <!-- RESULTADO SELECCIONADO -->
+  <div class="card mb-4 selected-card" *ngIf="selectedPage" @fadeSlide>
+    <div class="card-body">
+      <h5 class="card-title">{{ selectedPage.title }}</h5>
+
+      <p><strong>Descripción:</strong> {{ selectedPage.description }}</p>
+      <p><strong>Sección:</strong></p>
+
+      <span class="badge">{{ selectedPage.section }}</span>
+
+      <p class="mt-3">
+        <strong>Uso funcional:</strong>
+        Permite identificar y navegar directamente a la sección seleccionada
+        dentro del sitio.
+      </p>
+    </div>
+  </div>
+
+  <!-- LISTADO GENERAL -->
+  <div class="card" *ngIf="items.length">
+    <div class="card-body">
+      <h5 class="card-title mb-3">📌 Elementos del sitio</h5>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let item of items">
+          <div class="item-header">
+            <strong>{{ item.title }}</strong>
+            <span class="badge float-end">{{ item.section }}</span>
+          </div>
+
+          <p class="mb-1">
+            <strong>Descripción:</strong> {{ item.description }}
+          </p>
+
+          <p class="mb-0 text-muted small">
+            Uso funcional: describe la función de esta página dentro del sitio.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,25 @@
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.breadcrumb a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.current {
+  font-weight: 600;
+  color: #555;
+}
+
+.separator {
+  margin: 0 6px;
+  color: #999;
+}
